@@ -1,0 +1,96 @@
+﻿@model Doctor_Side.Models.DocAppointment
+
+@{
+    ViewData["Title"] = "View Patient";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0 font-size-18">Appointment List</h4>
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="../Index">Appointment List</a></li>
+                            <li class="breadcrumb-item active">Patient Details </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card overflow-hidden">
+                    <div class="bg-soft-primary">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="text-primary p-3">
+                                    <h3 class="text-md-right"> Patient Details</h3>
+                                </div>
+                            </div>
+                            <div class="col-5 align-self-end">
+                                <img src="assets/images/profile-img.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="avatar-md profile-user-wid mb-4">
+                                    <img src="~/_content/Medical/Patient_Image/@Model.Patient_Profile" class="rounded-circle" />
+                                    @*<img src="assets/images/users/avatar-1.jpg" alt="" class="img-thumbnail rounded-circle">*@
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-8">
+                                <div class="pt-4">
+                                    <div class="table-responsive">
+                                        <table class="table table-nowrap mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Patient Name :</th>
+                                                    <td> @Html.DisplayFor(model => model.Patient_Name)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Mobile :</th>
+                                                    <td> @Html.DisplayFor(model => model.Patient_Contact)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">E-mail :</th>
+                                                    <td> @Html.DisplayFor(model => model.Patient_Email)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Address :</th>
+                                                    <td> @Html.DisplayFor(model => model.Patient_Address)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">State :</th>
+                                                    <td> @Html.DisplayFor(model => model.State_Name)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">City :</th>
+                                                    <td> @Html.DisplayFor(model => model.City_Name)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card -->
+                <!-- end card -->
+                <!-- end card -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
