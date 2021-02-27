@@ -1,0 +1,37 @@
+﻿
+@using Patient_Side.Controllers;
+@using Medical.Models
+@model Medical.Models.ViewModel
+
+<div class="sidebar-cart">
+    <span class="cart-back-drop"></span>
+    <div class="shopping-cart">
+
+        <div class="cart-header">
+            <div class="title">Shopping Cart <span>(@TempData["count"])</span></div>
+            <button class="close-cart"><span class="flaticon-add"></span></button>
+        </div>
+        @foreach (var item in Model.cartList)
+        {
+            <ul class="shopping-cart-items">
+                <li class="cart-item">
+                    @*<input type="hidden" name="Id" asp-for="@item.Medicine_ID" value="@item.Medicine_ID" />*@
+                    <img src="~/_content/Medical/Medicine_Main_Image/@item.Medicine_Image" class="thumb" />
+                    <span class="item-name">@item.Medicine_Name</span>
+                    <span class="item-quantity">@item.Cart_Qty x <span class="item-amount">@item.Medicine_Price</span></span>
+
+
+                </li>
+
+
+            </ul>
+            <div class="shopping-cart-total"><strong>Subtotal:</strong> @(int.Parse(item.Medicine_Price) * item.Cart_Qty)</div>
+        }
+        <div class="cart-footer">
+
+            <a href="/PatMedicine/CartDisplay" class="theme-btn btn-style-three"><span class="btn-title">View Cart</span></a>
+            <a href="/PatMedicine/Checkout" class="theme-btn btn-style-one"><span class="btn-title">Checkout</span></a>
+        </div>
+
+    </div> <!-- End shopping-cart -->
+</div>

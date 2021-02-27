@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Medical.Models.Patient>
+
+@{
+    ViewData["Title"] = "Authentication Fail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="login-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="column col-lg-12 col-md-12 col-sm-12">
+                <!-- Login Form -->
+                <div class="login-form">
+                    
+                    <!--Login Form-->
+                    <form asp-action="Fail" asp-controller="PatientReg">
+                        <div class="form-group">
+                            <div class="message-box with-icon error">
+                                <div class="icon-box"><span class="icon fa fa-exclamation-triangle"></span></div>
+                                <h3>Authentication Fail</h3>
+                                <p>Your Email is Already Register !!!</p>
+                                
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <a href="Reg" class="theme-btn btn-style-one small" type="submit" name="submit-form">
+                                <span class="btn-title">
+                                    Try Again
+                                    </span>
+                            </a>
+                           
+                        </div>
+
+                       
+                    </form>
+                </div>
+                <!--End Login Form -->
+            </div>
+
+
+        </div>
+    </div>
+</section>
