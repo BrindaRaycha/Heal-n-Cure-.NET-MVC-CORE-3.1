@@ -8,3 +8,6 @@ Doctor can put their Information in their account, so patients can easily find t
 Admin manages all the localities needed, category, payments, and also can active/block Users(Doctor/Patient). He also manages all the product details and manage orders.
 
 EntityFrameWork MVC Core 3.1 , MySql , jQuery , Ajax used for the project
+
+#YouTube Link : https://youtu.be/D58RgUl77Qc
+
